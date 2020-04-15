@@ -47,9 +47,11 @@ Python 3.7.5 (default, Nov 20 2019, 09:21:52)
 
 ## Python3 deps
 
+```
 pip3 install git+https://github.com/matcool/anvil-parser.git
 pip3 install nbt
 pip3 install frozendict
+```
 
 ## Node
 
