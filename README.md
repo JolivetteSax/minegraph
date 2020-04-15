@@ -1,8 +1,12 @@
+# Minegraph
+
+![](imgs/Screenshot.png)
+
 See below for how to get this thing running. The python3 program graph.py takes data.json
 as input and loads it into minecraft. I bundled some data for options pricing so it'll do
 something interesting out of the box. 
 
-Example data.json
+## Example data.json
 {
      "155" : {
         "275" : {
@@ -24,22 +28,24 @@ water. You can then place a block in the water and ride the falls down, and if y
 you'll just spawn right next to the graph again, and this makes for easy death-warping 
 out of the graph by jumping into the void or whatever.
 
+## Versions
+
 I made this on an ubuntu install running 19.10, no promises for other posix compatible systems...
 
 This seems to work OK with both minecraft 14.4 and 15.2. The anvil-parser doesn't work on
-anything older, and loading the region files in 13.* caused it to barf a bunch of stack
+anything older, and loading the region files in 13.x caused it to barf a bunch of stack
 pops. Sort of a bummer since these are significantly slower than 1.11, for example.
 
 $ java -version
 openjdk version "11.0.6" 2020-01-14
 
-Python3 deps:
+## Python3 deps
 
 pip3 install git+https://github.com/matcool/anvil-parser.git
 pip3 install nbt
 pip3 install frozendict
 
-Node
+## Node
 
 ~/code/minegraph$ node -v
 v10.19.0
