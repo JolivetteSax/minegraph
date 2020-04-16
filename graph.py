@@ -11,10 +11,8 @@ region = anvil.EmptyRegion(0, 0)
 
 # Create `Block` objects that are used to set blocks
 bedrock = anvil.Block('minecraft', 'bedrock')
-stone = anvil.Block('minecraft', 'stone')
-dirt = anvil.Block('minecraft', 'dirt')
 
-block = stone
+block = bedrock;
 for z in range(512):
   for x in range(512):
     # a flat surface is necessary to prevent minecraft from filling in space in the void
@@ -26,12 +24,8 @@ for z in range(512):
       if str(z) in data[str(x)]:
         tower = data[str(x)][str(z)]
         height = tower['height']
-        b = tower['block']
-        if b == 'dirt':
-          block = dirt
-        elif b == 'stone':
-          block = stone
-
+        # TODO maybe verify? 
+        block = anvil.Block('minecraft', tower['block']);
     if height > 255:
       height = 255
     for y in range(height):

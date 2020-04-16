@@ -23,14 +23,16 @@ csv()
 
     const strike = parseInt(opt.Strike);
 
-    let block= 'stone';
+    let block= 'sea_lantern';
 
-
+    if(opt.Calls){
+      block = 'gold_block'
+    }
     if(opt.Calls && strike > underlying){
-      block = 'dirt';
+      block = 'tnt';
     }
     if(opt.Puts && strike < underlying){
-      block = 'dirt';
+      block = 'coal_block';
     }
 
     let exp = new Date(opt['Expiration Date']);
