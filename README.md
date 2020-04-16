@@ -18,7 +18,11 @@ something interesting out of the box.
 }
 ```
 
-I've implemented dirt, stone and bedrock.
+You can specify any minecraft block type. If you aren't sure what the block you want is called
+go into a creative mode, place the block and hit f3. When you look at the block, you'll see it
+referenced on the right hand of the screen. It'll say something like 'minecraft:tnt'. If your
+block type isn't referenced correctly that stack will be empty and you'll get a hole down into
+the void.
 
 The real magic happens in the anvil-parser and nbt lib. I just used the same 
 license as them to carry it forward. You are free to do whatever with my code, so long
